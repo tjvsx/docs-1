@@ -22,6 +22,20 @@ First clone the repository
 git clone https://github.com/ethereum/sourcify.git && cd sourcify
 ```
 
+## Install
+
+Sourcify is organized as a monorepo and uses [lerna](https://github.com/lerna/lerna) to manage the dependencies and its packages. Install with
+
+```bash
+npx lerna bootstrap
+```
+
+Build modules
+
+```bash
+npx lerna run build
+```
+
 ## Set environment variables
 
 Most of the settings are set with environment variables under the `environments/.env` file. You can copy the `environments/.env.dev` file and rename it to `.env` initially. You should at least configure the variables below to run the server and UI.
@@ -50,15 +64,7 @@ ALCHEMY_ID_POLYGON_MAINNET=
 ALCHEMY_ID_POLYGON_MUMBAI=
 ```
 
-## Install
-
-Sourcify is organized as a monorepo and uses [lerna](https://github.com/lerna/lerna) to manage the dependencies and its packages. Install with
-
-```bash
-npx lerna bootstrap
-```
-
-Build modules
+Rebuild modules
 
 ```bash
 npx lerna run build
